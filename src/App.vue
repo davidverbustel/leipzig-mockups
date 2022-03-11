@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <h1 class="header">Hello, I am in App.vue</h1>
+  <h1>Hello, I am in App.vue</h1>
   <HelloWorld msg="Hello World" />
 </template>
 
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,7 +25,7 @@ export default {
   margin-top: 60px;
 }
 
-.header {
+h1 {
   color: purple;
 }
 </style>
