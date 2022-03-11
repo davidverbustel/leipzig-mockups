@@ -1,5 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <h1 class="header">Hello, I am in App.vue</h1>
   <HelloWorld msg="Hello World" />
 </template>
 
@@ -22,5 +23,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.header {
+  color: purple;
 }
 </style>
