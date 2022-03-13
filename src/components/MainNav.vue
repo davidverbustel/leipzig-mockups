@@ -10,7 +10,9 @@
           border-b border-solid border-brand-gray-1
         "
       >
-        <a href="/" class="flex items-center h-full text-xl">{{ company }}</a>
+        <a :href="url" class="flex items-center h-full text-xl">{{
+          company
+        }}</a>
       </div>
     </div>
   </header>
@@ -22,6 +24,7 @@ export default {
   data() {
     return {
       company: "Bobo Careers",
+      url: "https://careers.google.com",
     };
   },
 };
