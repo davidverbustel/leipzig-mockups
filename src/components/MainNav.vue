@@ -10,7 +10,7 @@
           border-b border-solid border-brand-gray-1
         "
       >
-        <a href="/" class="flex items-center h-full text-xl">Bobo Careers</a>
+        <a href="/" class="flex items-center h-full text-xl">{{ company }}</a>
       </div>
     </div>
   </header>
@@ -19,5 +19,10 @@
 <script>
 export default {
   name: "MainNav",
+  data() {
+    return {
+      company: "Bobo Careers",
+    };
+  },
 };
 </script>
