@@ -24,7 +24,7 @@
 
 <script>
 import Headline from "@/components/JobSearch/Headline.vue";
-import JobSearchForm from "@/components/JobSearch/JobJobSearchForm.vue";
+import JobSearchForm from "@/components/JobSearch/JobSearchForm.vue";
 
 export default {
   name: "Hero",
