@@ -45,7 +45,6 @@
       </div>
 
       <subnav v-if="isLoggedIn" data-test="subnav" />
-      {{ example }}
     </div>
   </header>
 </template>
@@ -72,7 +71,6 @@ export default {
         { text: "Students", url: "/" },
         { text: "Jobs", url: "/jobs/results" },
       ],
-      isLoggedIn: false,
     };
   },
   computed: {
@@ -82,13 +80,13 @@ export default {
         "h-32": this.isLoggedIn,
       };
     },
-    example() {
+    isLoggedIn() {
       return this.$store.state.isLoggedIn;
     },
   },
   methods: {
     loginUser() {
-      this.isLoggedIn = true;
+      this.$store.commit("LOGIN_USER");
     },
   },
 };
