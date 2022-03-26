@@ -45,6 +45,7 @@
       </div>
 
       <subnav v-if="isLoggedIn" data-test="subnav" />
+      {{ example }}
     </div>
   </header>
 </template>
@@ -80,6 +81,9 @@ export default {
         "h-16": !this.isLoggedIn,
         "h-32": this.isLoggedIn,
       };
+    },
+    example() {
+      return this.$store.state.isLoggedIn;
     },
   },
   methods: {
