@@ -16,6 +16,8 @@
         </div>
       </div>
 
+      <accordion header="Degree" />
+
       <accordion header="Job Types">
         <p>Placeholder for now</p>
       </accordion>
