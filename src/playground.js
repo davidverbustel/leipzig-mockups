@@ -1,11 +1,13 @@
-const sushi = [
-  "Tuna",
-  "Salmon",
-  "Yellowtail",
-  "Eel",
-  "Shrimp",
-  "Octopus",
-  "Uni",
-];
+// Arrays - order
+// Objects - association
+// Set - uniqueness
 
-console.log(sushi.slice(2, 5));
+const numbers = new Set();
+numbers.add(5);
+numbers.add(10);
+numbers.add(15);
+
+numbers.add(10);
+numbers.add(5);
+
+console.log(numbers);
