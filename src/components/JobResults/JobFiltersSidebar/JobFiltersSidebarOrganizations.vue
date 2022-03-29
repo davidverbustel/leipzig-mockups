@@ -8,7 +8,14 @@
             :key="organization"
             class="w-1/2 h-8"
           >
-            <input :id="organization" type="checkbox" class="mr-3" />
+            <input
+              :id="organization"
+              v-model="selectedOrganizations"
+              :value="organization"
+              type="checkbox"
+              class="mr-3"
+              @change="selectOrganization"
+            />
             <label :for="organization" data-test="organization">{{
               organization
             }}</label>
@@ -31,8 +38,16 @@ export default {
   components: {
     Accordion,
   },
+  data() {
+    return {
+      selectedOrganizations: [],
+    };
+  },
   computed: {
     ...mapGetters([UNIQUE_ORGANIZATIONS]),
+  },
+  methods: {
+    selectOrganization() {},
   },
 };
 </script>
