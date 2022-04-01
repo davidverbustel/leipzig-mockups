@@ -18,28 +18,39 @@
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
   name: "Accordion",
-  props: {
-    header: {
-      type: String,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      isOpen: false,
+  setup() {
+    const header = ref("Cool title");
+
+    const open = () => {
+      header.value = "Awesome title";
     };
+
+    return { header, open };
   },
-  computed: {
-    caretIcon() {
-      return this.isOpen ? ["fas", "angle-up"] : ["fas", "angle-down"];
-    },
-  },
-  methods: {
-    open() {
-      this.isOpen = !this.isOpen;
-    },
-  },
+  // props: {
+  //   header: {
+  //     type: String,
+  //     required: true,
+  //   },
+  // },
+  // data() {
+  //   return {
+  //     isOpen: false,
+  //   };
+  // },
+  // computed: {
+  //   caretIcon() {
+  //     return this.isOpen ? ["fas", "angle-up"] : ["fas", "angle-down"];
+  //   },
+  // },
+  // methods: {
+  //   open() {
+  //     this.isOpen = !this.isOpen;
+  //   },
+  // },
 };
 </script>
