@@ -1,11 +1,11 @@
-// const numbers = [1, 3, 5, 7, 2, 9, 11, 6];
+const { ref, reactive, computed } = require("vue");
 
-// console.log(numbers.filter((number) => number > 6));
+const person = reactive({
+  name: "Boris",
+});
 
-const jobs = [
-  { title: "Angular Developer", organization: "Microsoft" },
-  { title: "Programmer", organization: "Google" },
-  { title: "Developer", organization: "Microsoft" },
-];
+const title = computed(() => person.value.name + " the Great");
+console.log(title.value);
 
-console.log(jobs.filter((job) => job.organization === "Microsoft"));
+person.value.name = "Peter";
+console.log(title.value);
