@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { computed, toRefs } from "vue";
+
 export default {
   name: "ActionButton",
   props: {
@@ -21,19 +23,22 @@ export default {
       },
     },
   },
-  computed: {
-    buttonClass() {
+  setup(props) {
+    const { type } = toRefs(props);
+
+    const buttonClass = computed(() => {
       return {
-        [this.type]: true,
+        [type.value]: true,
       };
-    },
+    });
+    return { buttonClass };
   },
 };
 </script>
 
 <style scoped>
 button {
-  @apply px-5 py-3  font-medium;
+  @apply px-5 py-3 font-medium;
 }
 
 .primary {
