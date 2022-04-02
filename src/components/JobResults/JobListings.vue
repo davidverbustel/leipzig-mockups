@@ -36,9 +36,11 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { onMounted } from "vue";
+import { useStore } from "vuex";
 
-import { FETCH_JOBS, FILTERED_JOBS } from "@/store/constants";
+import { useFilteredJobs } from "@/store/composables";
+import { FETCH_JOBS } from "@/store/constants";
 import JobListing from "@/components/JobResults/JobListing.vue";
 
 export default {
@@ -46,34 +48,34 @@ export default {
   components: {
     JobListing,
   },
-  computed: {
-    ...mapGetters([FILTERED_JOBS]),
-    currentPage() {
-      const pageString = this.$route.query.page || "1";
-      return Number.parseInt(pageString);
-    },
-    previousPage() {
-      const previousPage = this.currentPage - 1;
-      const firstPage = 1;
-      return previousPage >= firstPage ? firstPage : undefined;
-    },
-    nextPage() {
-      const nextPage = this.currentPage + 1;
-      const maxPage = Math.ceil(this.FILTERED_JOBS.length / 10);
-      return nextPage <= maxPage ? nextPage : undefined;
-    },
-    displayedJobs() {
-      const pageNumber = this.currentPage;
-      const firstJobIndex = (pageNumber - 1) * 10;
-      const lastJobIndex = pageNumber * 10;
-      return this.FILTERED_JOBS.slice(firstJobIndex, lastJobIndex);
-    },
+  setup() {
+    const store = useStore();
+    const fetchJobs = () => store.dispatch(FETCH_JOBS);
+    onMounted(fetchJobs);
+
+    const filteredJobs = useFilteredJobs();
   },
-  async mounted() {
-    this.FETCH_JOBS();
-  },
-  methods: {
-    ...mapActions([FETCH_JOBS]),
-  },
+  // computed: {
+  //   currentPage() {
+  //     const pageString = this.$route.query.page || "1";
+  //     return Number.parseInt(pageString);
+  //   },
+  //   previousPage() {
+  //     const previousPage = this.currentPage - 1;
+  //     const firstPage = 1;
+  //     return previousPage >= firstPage ? firstPage : undefined;
+  //   },
+  //   nextPage() {
+  //     const nextPage = this.currentPage + 1;
+  //     const maxPage = Math.ceil(this.FILTERED_JOBS.length / 10);
+  //     return nextPage <= maxPage ? nextPage : undefined;
+  //   },
+  //   displayedJobs() {
+  //     const pageNumber = this.currentPage;
+  //     const firstJobIndex = (pageNumber - 1) * 10;
+  //     const lastJobIndex = pageNumber * 10;
+  //     return this.FILTERED_JOBS.slice(firstJobIndex, lastJobIndex);
+  //   },
+  // },
 };
 </script>
