@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import { ref } from "vuex";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 
 import ActionButton from "@/components/Shared/ActionButton.vue";
