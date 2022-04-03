@@ -37,11 +37,10 @@
 
 <script>
 import { computed, onMounted } from "vue";
-import { useStore } from "vuex";
 
 import useCurrentPage from "@/composables/useCurrentPage";
-import { useFilteredJobs } from "@/store/composables";
-import { FETCH_JOBS } from "@/store/constants";
+import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages";
+import { useFilteredJobs, useFetchJobsDispatch } from "@/store/composables";
 import JobListing from "@/components/JobResults/JobListing.vue";
 
 export default {
@@ -50,25 +49,17 @@ export default {
     JobListing,
   },
   setup() {
-    const store = useStore();
-    const fetchJobs = () => store.dispatch(FETCH_JOBS);
-    onMounted(fetchJobs);
+    onMounted(useFetchJobsDispatch);
 
     const filteredJobs = useFilteredJobs();
 
     const currentPage = useCurrentPage();
 
-    const previousPage = computed(() => {
-      const previousPage = currentPage.value - 1;
-      const firstPage = 1;
-      return previousPage >= firstPage ? firstPage : undefined;
-    });
-
-    const nextPage = computed(() => {
-      const nextPage = currentPage.value + 1;
-      const maxPage = Math.ceil(filteredJobs.value.length / 10);
-      return nextPage <= maxPage ? nextPage : undefined;
-    });
+    const maxPage = computed(() => Math.ceil(filteredJobs.value.length / 10));
+    const { previousPage, nextPage } = usePreviousAndNextPages(
+      currentPage,
+      maxPage
+    );
 
     const displayedJobs = computed(() => {
       const pageNumber = currentPage.value;
