@@ -2,7 +2,7 @@
 <template>
   <div class="mt-5">
     <input
-      v-model="skillsSearchTerm"
+      v-model.lazy.trim="skillsSearchTerm"
       class="
         p-3
         h-12
