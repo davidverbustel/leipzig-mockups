@@ -13,6 +13,7 @@
         text-base
       "
       placeholder="Computer programming, Finance degree"
+      data-test="skills-search-input"
     />
   </div>
 </template>
