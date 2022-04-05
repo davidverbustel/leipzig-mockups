@@ -21,8 +21,8 @@ export default defineComponent({
     JobFiltersSidebarCheckboxGroup,
   },
   setup() {
-    const uniqueDegrees = useUniqueOrganizations();
-    return { uniqueDegrees, ADD_SELECTED_ORGANIZATIONS };
+    const uniqueOrganizations = useUniqueOrganizations();
+    return { uniqueOrganizations, ADD_SELECTED_ORGANIZATIONS };
   },
 });
 </script>
