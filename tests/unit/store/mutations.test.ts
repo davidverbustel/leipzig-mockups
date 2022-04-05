@@ -73,11 +73,13 @@ describe("mutations", () => {
         selectedOrganizations: ["Random Org"],
         selectedJobTypes: ["Random job type"],
         selectedDegrees: ["Random degree"],
+        skillsSearchTerm: "Random skill",
       });
       mutations.CLEAR_USER_JOB_FILTER_SELECTIONS(startingState);
       expect(startingState.selectedOrganizations).toEqual([]);
       expect(startingState.selectedJobTypes).toEqual([]);
       expect(startingState.selectedDegrees).toEqual([]);
+      expect(startingState.skillsSearchTerm).toBe("");
     });
   });
 });
