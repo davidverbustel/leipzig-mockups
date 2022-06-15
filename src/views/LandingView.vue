@@ -1,7 +1,7 @@
 <template>
 	<header-container>
 		<template #title>
-			<h1 class="w-full text-4xl font-normal">LandingPage</h1>
+			<h1 class="w-full text-4xl font-normal">Blank LandingPage</h1>
 		</template>
 
 		<template #subtitle>
