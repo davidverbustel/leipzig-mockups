@@ -15,7 +15,7 @@ const routes = [
 		name: "LandingView",
 		component: LandingView,
 		meta: {
-			layout: "default",
+			layout: "landing",
 		},
 	},
 	{

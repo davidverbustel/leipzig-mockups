@@ -1,24 +1,31 @@
 <template>
-	<header-container>
-		<template #title>
-			<h1 class="w-full text-4xl font-normal">Blank LandingPage</h1>
-		</template>
-
-		<template #subtitle>
-			<h2 class="w-full my-4 text-base font-light">LandingPage</h2>
-		</template>
-	</header-container>
+	<Header></Header>
+	<hero></hero>
+	<selling-points></selling-points>
+	<features></features>
+	<launch-notify></launch-notify>
+	<Footer></Footer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import HeaderContainer from "@/components/Shared/HeaderContainer.vue";
+import Hero from "@/components/Landing/Hero.vue";
+import SellingPoints from "@/components/Landing/SellingPoints.vue";
+import LaunchNotify from "@/components/Landing/LaunchNotify.vue";
+import Features from "@/components/Landing/Features.vue";
+import Footer from "@/components/Landing/Footer.vue";
+import Header from "@/components/Landing/Header.vue";
 
 export default defineComponent({
 	name: "LandingView",
 	components: {
-		HeaderContainer,
+		Hero,
+		SellingPoints,
+		LaunchNotify,
+		Features,
+		Footer,
+		Header,
 	},
 });
 </script>
