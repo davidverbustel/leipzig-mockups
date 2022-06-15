@@ -66,6 +66,7 @@ export default defineComponent({
 				{ text: "Blank", url: "/blank" },
 				{ text: "Search", url: "/app/search" },
 				{ text: "Jobs", url: "/app/jobs/results" },
+				{ text: "Login", url: "/login" },
 			],
 		};
 	},
