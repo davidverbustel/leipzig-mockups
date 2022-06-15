@@ -5,7 +5,7 @@
 				class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-gray-1"
 			>
 				<router-link
-					:to="{ name: 'Home' }"
+					:to="{ name: 'LandingView' }"
 					class="flex items-center h-full text-xl"
 					>Joobs</router-link
 				>
@@ -64,7 +64,8 @@ export default defineComponent({
 		return {
 			menuItems: [
 				{ text: "Blank", url: "/blank" },
-				{ text: "Jobs", url: "/jobs/results" },
+				{ text: "Search", url: "/app/search" },
+				{ text: "Jobs", url: "/app/jobs/results" },
 			],
 		};
 	},

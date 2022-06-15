@@ -1,11 +1,11 @@
 <template>
 	<header-container>
 		<template #title>
-			<h1 class="w-full text-4xl font-normal">Blank page</h1>
+			<h1 class="w-full text-4xl font-normal">LandingPage</h1>
 		</template>
 
 		<template #subtitle>
-			<h2 class="w-full my-4 text-base font-light">this is a blank page</h2>
+			<h2 class="w-full my-4 text-base font-light">LandingPage</h2>
 		</template>
 	</header-container>
 </template>
@@ -16,7 +16,7 @@ import { defineComponent } from "vue";
 import HeaderContainer from "@/components/Shared/HeaderContainer.vue";
 
 export default defineComponent({
-	name: "BlankView",
+	name: "LandingView",
 	components: {
 		HeaderContainer,
 	},
