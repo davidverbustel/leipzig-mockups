@@ -38,7 +38,7 @@
   "jobs": [
     {
       "id": 1,
-      "title": "Angular Developer",
+      "title": "Vue Developer",
       "organization": "Vue and Me",
       "degree": "Master's",
       "jobType": "Intern",
@@ -416,7 +416,7 @@
     },
     {
       "id": 16,
-      "title": "Java Engineer",
+      "title": "Vue Engineer",
       "organization": "VueTube",
       "degree": "Associate",
       "jobType": "Intern",
@@ -614,7 +614,7 @@
     },
     {
       "id": 24,
-      "title": "CSS Associate",
+      "title": "Vue Associate",
       "organization": "Point of Vue",
       "degree": "Master's",
       "jobType": "Full-time",
@@ -761,7 +761,7 @@
     },
     {
       "id": 30,
-      "title": "JavaScript Ninja",
+      "title": "Vue Ninja",
       "organization": "Vue and Me",
       "degree": "Pursuing Degree",
       "jobType": "Temporary",
@@ -810,7 +810,7 @@
     },
     {
       "id": 32,
-      "title": "Ruby VP",
+      "title": "Vue VP",
       "organization": "Vue Can Do It",
       "degree": "Bachelor's",
       "jobType": "Temporary",
@@ -935,7 +935,7 @@
     },
     {
       "id": 37,
-      "title": "UI Ninja",
+      "title": "Vue UI Ninja",
       "organization": "Vue Can Do It",
       "degree": "Bachelor's",
       "jobType": "Intern",
@@ -1008,7 +1008,7 @@
     },
     {
       "id": 40,
-      "title": "React Lead",
+      "title": "Vue Lead",
       "organization": "Vue Can Do It",
       "degree": "Associate",
       "jobType": "Part-time",
@@ -1034,7 +1034,7 @@
     },
     {
       "id": 41,
-      "title": "React Coder",
+      "title": "Vue Coder",
       "organization": "Vue and Me",
       "degree": "Bachelor's",
       "jobType": "Intern",
@@ -1083,7 +1083,7 @@
     },
     {
       "id": 43,
-      "title": "React Native Ninja",
+      "title": "Vue Native Ninja",
       "organization": "VueTube",
       "degree": "Master's",
       "jobType": "Part-time",
@@ -1133,7 +1133,7 @@
     },
     {
       "id": 45,
-      "title": "Angular 2 Lead",
+      "title": "Vue 2 Lead",
       "organization": "Et Vue Brute",
       "degree": "Bachelor's",
       "jobType": "Temporary",
@@ -1230,7 +1230,7 @@
     },
     {
       "id": 49,
-      "title": "HTML Programmer",
+      "title": "Vue Programmer",
       "organization": "VueTube",
       "degree": "Bachelor's",
       "jobType": "Part-time",
@@ -1553,7 +1553,7 @@
     },
     {
       "id": 62,
-      "title": "React Programmer",
+      "title": "Vue Programmer",
       "organization": "Et Vue Brute",
       "degree": "Master's",
       "jobType": "Part-time",
@@ -1749,7 +1749,7 @@
     },
     {
       "id": 70,
-      "title": "React Native Manager",
+      "title": "Vue Native Manager",
       "organization": "Vue and Me",
       "degree": "Pursuing Degree",
       "jobType": "Temporary",
@@ -1950,7 +1950,7 @@
     },
     {
       "id": 78,
-      "title": "React Supervisor",
+      "title": "Vue Supervisor",
       "organization": "Vue and Me",
       "degree": "Ph.D.",
       "jobType": "Full-time",
@@ -2231,7 +2231,7 @@
     },
     {
       "id": 89,
-      "title": "React Native Specialist",
+      "title": "Vue Native Specialist",
       "organization": "VueTube",
       "degree": "Master's",
       "jobType": "Temporary",
@@ -2405,7 +2405,7 @@
     },
     {
       "id": 96,
-      "title": "React Associate",
+      "title": "Vue Associate",
       "organization": "VueTube",
       "degree": "Master's",
       "jobType": "Temporary",
@@ -2461,7 +2461,7 @@
     },
     {
       "id": 98,
-      "title": "React Native Specialist",
+      "title": "Vue Native Specialist",
       "organization": "Point of Vue",
       "degree": "Ph.D.",
       "jobType": "Intern",
