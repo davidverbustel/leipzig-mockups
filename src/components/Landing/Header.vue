@@ -211,7 +211,7 @@
 				</PopoverGroup>
 				<div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
 					<router-link
-						:to="{ name: 'JobResults' }"
+						:to="{ name: 'JobBrowse' }"
 						class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900 px-4 py-2"
 						>Demo</router-link
 					>

@@ -13,12 +13,16 @@ import { useRoute } from "vue-router";
 
 import landingLayout from "@/layouts/LandingLayout.vue";
 import defaultLayout from "@/layouts/DefaultLayout.vue";
+import appLayout from "@/layouts/AppLayout.vue";
+import emptyLayout from "@/layouts/EmptyLayout.vue";
 
 export default defineComponent({
 	name: "App",
 	components: {
 		landingLayout,
 		defaultLayout,
+		appLayout,
+		emptyLayout,
 	},
 	setup() {
 		const route = useRoute();

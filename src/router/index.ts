@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 const LandingView = () => import("@/views/LandingView.vue");
 const LoginView = () => import("@/views/LoginView.vue");
+const JobBrowseView = () =>
+	import(/* webpackChunkName: "jobs" */ "@/views/JobBrowseView.vue");
 const JobSearchView = () => import("@/views/JobSearchView.vue");
 const JobResultsView = () =>
 	import(/* webpackChunkName: "jobs" */ "@/views/JobResultsView.vue");
@@ -35,11 +37,19 @@ const routes = [
 		},
 	},
 	{
+		path: "/app/jobs/",
+		name: "JobBrowse",
+		component: JobBrowseView,
+		meta: {
+			layout: "app",
+		},
+	},
+	{
 		path: "/app/jobs/results",
 		name: "JobResults",
 		component: JobResultsView,
 		meta: {
-			layout: "default",
+			layout: "app",
 		},
 	},
 	{
@@ -54,6 +64,9 @@ const routes = [
 		path: "/blank",
 		name: "Blank",
 		component: BlankView,
+		meta: {
+			layout: "empty",
+		},
 	},
 ];
 
